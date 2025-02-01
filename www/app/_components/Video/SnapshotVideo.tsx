@@ -1,6 +1,7 @@
 "use client";
 import { useRef, useEffect, useState, useMemo } from "react";
 import useIntersection from "@/app/_components/common/useIntersection";
+import { cn } from "@/lib/utils";
 
 // looking to add width or height? add a poster with the size you want instead.
 export default function SnapshotVideo(props: {
@@ -38,8 +39,10 @@ export default function SnapshotVideo(props: {
 
   return (
     <video
-      className={`${className ? className : ""} object-cover w-full h-auto`}
-      style={{ transform: "translateZ(0)" }}
+      className={cn(
+        "object-cover w-full h-auto transform-gpu",
+        className
+      )}
       muted
       ref={videoRef}
       loop

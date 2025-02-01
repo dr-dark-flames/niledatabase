@@ -1,7 +1,5 @@
 "use client";
 import Image from "next/image";
-import verticalLine from "@/public/vertical-line.svg";
-import nileTwinkle from "@/public/nile-twinkle.svg";
 import React, { useState } from "react";
 import CodeTyper from "./CodeTyper";
 import MobileLines from "./MobileLines";
@@ -113,7 +111,7 @@ export default function HoverEffect() {
                 return (
                   <Image
                     key={idx}
-                    src={verticalLine}
+                    src={"/vertical-line.svg"}
                     alt="vertical line"
                     className="absolute"
                     style={{
@@ -129,7 +127,7 @@ export default function HoverEffect() {
             <div className="flex flex-1 items-center justify-center pointer-events-none">
               <div className="relative md:pb-14 w-full h-full md:mt-64 md:ml-40 flex items-center justify-center">
                 <Image
-                  src={nileTwinkle}
+                  src={"/nile-twinkle.svg"}
                   alt="twinkling nile logo"
                   className="absolute top-0 left-0"
                 />

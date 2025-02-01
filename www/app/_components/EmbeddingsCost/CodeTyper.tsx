@@ -66,9 +66,8 @@ export default function CodeTyper({ lines, allowTyping }: Props) {
     };
   }, [lineNumber, wordPosition, letterPosition, allowTyping]);
   */
-
   return (
-    <div className="relative pl-5 w-full" style={{ height: lines.length * 18 }}>
+    <div className={`relative pl-5 w-full h-[${lines.length * 18}px]`}>
       {lines.map((words, line) => {
         let currentWordPosition = wordPosition;
         if (line > lineNumber) {
@@ -79,8 +78,7 @@ export default function CodeTyper({ lines, allowTyping }: Props) {
         return (
           <div
             key={`${line}${wordPosition}`}
-            className="absolute h-4 leading-4 inline whitespace-nowrap"
-            style={{ top: line * 18 }}
+            className={`absolute h-4 leading-4 inline whitespace-nowrap top-[${line * 18}px]`}
           >
             {words.map((word, currentWord) => {
               let currentLetterPosition = letterPosition;
@@ -91,7 +89,7 @@ export default function CodeTyper({ lines, allowTyping }: Props) {
               }
               return (
                 <span
-                  style={{ color: word.color }}
+                  className={`text-[${word.color}]`}
                   key={`${line}${word.text}${currentWord}`}
                 >
                   <TextTyper

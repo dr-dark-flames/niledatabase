@@ -1,5 +1,4 @@
 import Image from "next/image";
-import queryTokens from "@/public/query-tokens.png";
 import Container from "../_components/common/Container";
 import PageHeader from "../_components/common/PageHeader";
 import FAQ from "./_components/FAQ";
@@ -27,8 +26,7 @@ const Line = ({
       {children}
     </div>
     <div
-      className={"h-px  bg-white"}
-      style={{ opacity: hideDivider ? 0 : 0.3 }}
+      className={`h-px bg-white ${hideDivider ? 'opacity-0' : 'opacity-30'}`}
     />
   </>
 );
@@ -180,7 +178,7 @@ export default function Pricing() {
             <div className="lg:w-1/2">
               <div className="px-20">
                 <Image
-                  src={queryTokens}
+                  src={"/query-tokens.png"}
                   alt="nile logo blue orange gradient with text background"
                 />
               </div>

@@ -112,10 +112,8 @@ export default function MobileLines() {
               {words.map((word, currentWord) => {
                 return (
                   <span
-                    style={{
-                      color: word.color,
-                      paddingLeft: word.pad ? `${word.pad}px` : 0,
-                    }}
+                    className={`${word.pad ? 'pl-3' : ''}`}
+                    style={{ color: word.color }}
                     key={`${line}${word.text}${currentWord}`}
                   >
                     {word.text}

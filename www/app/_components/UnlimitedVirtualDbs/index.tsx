@@ -1,18 +1,13 @@
 import Image from "next/image";
-import cube from "@/public/cube.svg";
-import cubePurple from "@/public/cube_purple.svg";
-import cubeBackdrop from "@/public/cube_backdrop.svg";
-import cubeBottomLeft from "@/public/cube_bottom_left.svg";
-import cubeBottomRight from "@/public/cube_bottom_right.svg";
 import { NewHeading } from "../common/NewHeading";
 function Cuber() {
   return (
     <>
       <div className="absolute top-0 left-0 bottom-0 right-0  w-[203px] h-[219px] base">
-        <Image src={cube} alt="3d cube" />
+        <Image src={"/cube.svg"} alt="3d cube" />
       </div>
       <div className="absolute top-0 left-0 bottom-0 right-0  w-[203px] h-[219px] hover">
-        <Image src={cubePurple} alt="3d cube" />
+        <Image src={"/cube_purple.svg"} alt="3d cube" />
       </div>
     </>
   );
@@ -31,12 +26,12 @@ export default function UnlimitedVirtualDbs() {
 
             <div className="hidden lg:flex absolute top-0 left-0 w-full h-full opacity-0 boxes-bg transition-opacity duration-500 pointer-events-none">
               <Image
-                src={cubeBottomRight}
+                src={"/cube_bottom_right.svg"}
                 alt="3d cube"
                 className="top-[223px] left-[0px] absolute"
               />
               <Image
-                src={cubeBottomLeft}
+                src={"/cube_bottom_left.svg"}
                 alt="3d cube"
                 className="absolute top-[292px] left-[486px] "
               />
@@ -45,7 +40,7 @@ export default function UnlimitedVirtualDbs() {
 
             <div className="max-w-none lg:max-w-max pointer-events-none opacity-0 lg:opacity-100">
               <Image
-                src={cubeBackdrop}
+                src={"/cube_backdrop.svg"}
                 alt="perspective gradient lined platform"
               />
             </div>

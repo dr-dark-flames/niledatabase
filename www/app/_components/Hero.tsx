@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import arrow from "@/public/icons/arrow.svg";
 import { HeroText } from "./common/Hero";
 
 export default function Hero() {
@@ -19,7 +18,7 @@ export default function Hero() {
                 </span>
                 <Image
                   className="-ml-1"
-                  src={arrow}
+                  src={"/icons/arrow.svg"}
                   alt="arrow"
                   width={16}
                   height={16}
